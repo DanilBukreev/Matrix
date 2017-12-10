@@ -109,15 +109,20 @@ int main(int argc, char *argv[]) {
         break;
       }
       case 4: {
-        swap(rows, cols);
-        for (int i = 0; i < rows; i++) {
-          for (int j = 0; j < cols; j++) {
-            cout << arr[i][j] << " ";
-          }
+         case 4 : {
+         for (int i=0; i < rows; i++){
+             for (int j=0; j < cols; j++)
+                  cout << arr[i][j] << "\t";
+               cout << endl;
+           }
           cout << endl;
-        }
-        break;
-      }
+          for (int i=0 ; i < cols; i++){
+               for (int j=0; j < rows;j++)
+               cout << arr[j][i] << "\t";
+               cout << endl;
+          }
+         break;
+         }
       case 3: {
         cout << "Введите размер матрицы:" << endl;
         cin >> rows2 >> cols2;
