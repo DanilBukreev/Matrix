@@ -108,8 +108,7 @@ int main(int argc, char *argv[]) {
         exit(1);
         break;
       }
-      case 4: {
-         case 4 : {
+         case 4: {
          for (int i=0; i < rows; i++){
              for (int j=0; j < cols; j++)
                   cout << arr[i][j] << "\t";
