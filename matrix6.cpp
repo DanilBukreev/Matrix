@@ -3,7 +3,7 @@
 #include <cstdio>
 #include <fstream>
 using namespace std;
-void writeFile(int **arr,int rows, int cols){
+void writeFile(int **&arr,int &rows, int &cols){
    ofstream fout ("matrix.txt", ios :: app);
   for (int i = 0; i < rows; i++) {
     for (int j = 0; j < cols; j++) {
@@ -12,7 +12,7 @@ void writeFile(int **arr,int rows, int cols){
     fout << endl;
   }
 }
-void readFile( int **arr, int rows, int cols) {
+void readFile( int **&arr, int &rows, int &cols) {
  cout << "Матрицу какого размера вывести?" << endl;
     cin >> rows >> cols;
      for (int i = 0; i < rows; i++) {
@@ -58,7 +58,7 @@ void sum(int rows, int cols, int **arr, int **arr2) {
     cout << endl;
   }
 }
-void print(int rows, int cols, int **arr) {
+void print(int &rows, int &cols, int **&arr) {
   if (rows == 0) {
     cout << "Матрица пуста" << endl;
     exit(1);
