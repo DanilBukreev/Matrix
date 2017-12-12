@@ -20,17 +20,16 @@ void readFile( int **&arr, int &rows, int &cols) {
   }
 
     ifstream fin("input.txt");
-    if (!fin.is_open()) // если файл не открыт
-        cout << "Файл не может быть открыт!\n"; // сообщить об этом
+    if (!fin.is_open()) 
+        cout << "Файл не может быть открыт!\n"; 
     else
     {
-        cout<<"матрица:"<<endl;
         for(int i=0;i<rows;i++)
         {
             for(int j=0;j<cols;j++)
             {
                 fin>>arr[i][j];
-                cout<<arr[i][j]<<"\t";
+                
             }
             cout<<endl;
         }
